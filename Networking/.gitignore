@@ -1,0 +1,27 @@
+# Compiled JavaScript files
+*.js
+!jest.config.js
+
+# TypeScript declaration files
+*.d.ts
+
+# Dependencies
+node_modules/
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out/
+
+# Private keys
+*.pem
+
+# Log files
+*.log
+npm-debug.log*
+
+# OS-generated files
+.DS_Store
+
+# Editor directories and settings
+.vscode/
+.idea/
