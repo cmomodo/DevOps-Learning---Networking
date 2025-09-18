@@ -25,3 +25,9 @@ npm-debug.log*
 # Editor directories and settings
 .vscode/
 .idea/
+
+#we dont want to include the pem file 
+*.pem
+
+# Ignore environment variable files
+.env

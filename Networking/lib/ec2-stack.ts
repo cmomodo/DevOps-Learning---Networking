@@ -15,7 +15,7 @@ export class Ec2Stack extends cdk.Stack {
       vpc: props.vpc,
       allowAllOutbound: true,
       description: "security group for ec2",
-      securityGroupName: "sg-nginx",
+      securityGroupName: "nginx-sg",
     });
     sg.addIngressRule(ec2.Peer.anyIpv4(), ec2.Port.tcp(22), "allow ssh access");
     sg.addIngressRule(
