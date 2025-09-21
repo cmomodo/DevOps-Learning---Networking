@@ -12,12 +12,15 @@ export class Route53Stack extends cdk.Stack {
   constructor(scope: Construct, id: string, props: Route53StackProps) {
     super(scope, id, props);
 
+    //The hosted zone for route53
     const hostedZone = route53.HostedZone.fromLookup(this, "HostedZone", {
       domainName: process.env.ROUTE53_DOMAIN_NAME || "ceedev.co.uk",
     });
 
+    //The a record for route53
     new route53.ARecord(this, "NginxARecord", {
       zone: hostedZone,
+      //the record name is the subdomain
       recordName: process.env.ROUTE53_SUBDOMAIN || "nginx",
       target: route53.RecordTarget.fromIpAddresses(
         props.instance.instancePublicIp
