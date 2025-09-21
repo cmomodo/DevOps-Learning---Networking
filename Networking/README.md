@@ -27,6 +27,8 @@ This module provisions a Virtual Private Cloud (VPC) with public subnets and dep
 
 ## System Architecture
 
+![DNS system design](screenshots/DNS_Project.gif)
+
 The architecture consists of the following components:
 
 - **VPC**: A dedicated virtual network for your AWS resources.
@@ -54,6 +56,7 @@ The architecture consists of the following components:
 ## Deployment
 
 1. **Install Dependencies:**
+
    ```bash
    npm install
    ```
